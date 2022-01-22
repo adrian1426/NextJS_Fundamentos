@@ -1,5 +1,10 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <p>Hola Next.js</p>
+    <div>
+      <p>Hola Next.js</p>
+      <Link href="/productos">Productos</Link>
+    </div>
   )
 }
