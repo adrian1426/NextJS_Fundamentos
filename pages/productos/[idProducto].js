@@ -1,15 +1,9 @@
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+import useIsMounted from "../../hooks/useIsMounted";
 
 const Producto = () => {
+  const loaded = useIsMounted();
   const router = useRouter();
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    if (router.isReady) {
-      setLoaded(true);
-    }
-  }, [router.isReady]);
 
   if (!loaded) {
     return null;
